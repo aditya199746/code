@@ -156,3 +156,12 @@ function flattenArray(arr, depth = Infinity) {
   console.log(flatDepth1); // Output: [1, 2, 3, [4, 5], 6, 7, 8, 9]
   console.log(flatDepth2); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   console.log(flatAll);
+
+const isIntersecting = (rect1, rect2) => {
+    return !(
+      rect1.x > rect2.x + rect2.width ||
+      rect1.x + rect1.width < rect2.x ||
+      rect1.y > rect2.y + rect2.height ||
+      rect1.y + rect1.height < rect2.y
+    );
+  };
